@@ -2,7 +2,7 @@
 
 namespace Anam\Dashboard\database\seeds;
 
-use App\Models\Admin\User;
+use Anam\Dashboard\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
