@@ -19,6 +19,12 @@
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu" data-widget="tree">
             {!! indent(generate_multilevel_menus()) !!}
+            @if(super_user())
+                @include('dashboard::layouts.partials.menus.superUserMenus')
+            @endif
+            @if(super_user() && developer_mode())
+                @include('dashboard::layouts.partials.menus.devMenus')
+            @endif
         </ul>
         <!-- /.sidebar-menu -->
     </section>
