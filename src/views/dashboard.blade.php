@@ -9,6 +9,6 @@
 
 @push('scripts')
     <script>
-        $('#dashboard-mm').addClass('kt-menu__item--active');
+        $('#dashboard-mm').addClass('active');
     </script>
 @endpush
