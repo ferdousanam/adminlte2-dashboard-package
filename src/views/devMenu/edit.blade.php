@@ -1,7 +1,7 @@
 @extends('dashboard::layouts.app')
 
 @section('page_title', 'Edit Main Menu')
-@section('page_tagline', '')
+@section('page_tagline', 'Edit Main Menu')
 
 @section('content')
     @include('dashboard::msg.message')
