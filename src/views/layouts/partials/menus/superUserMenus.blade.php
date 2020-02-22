@@ -5,24 +5,24 @@
         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
     </a>
     <ul class="treeview-menu">
-        <li id="main-menus-sm">
+        <li id="user-sm">
             <a href="{{ route('user.index') }}"><i class="fa fa-circle-o"></i><span>Show All User</span></a>
         </li>
-        <li id="main-menus--create-sm">
+        <li id="user--create-sm">
             <a href="{{ route('user.create') }}"><i class="fa fa-circle-o"></i><span>Add New User</span></a>
         </li>
     </ul>
 </li>
-<li id="user-mm" class="treeview">
+<li id="user-types-mm" class="treeview">
     <a href="javascript:;">
         <i class="fa fa-home"></i><span>User Types</span>
         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
     </a>
     <ul class="treeview-menu">
-        <li id="main-menus-sm">
+        <li id="user-types-sm">
             <a href="{{ route('user-type.index') }}"><i class="fa fa-circle-o"></i><span>Show User Types</span></a>
         </li>
-        <li id="main-menus--create-sm">
+        <li id="user-types--create-sm">
             <a href="{{ route('user-type.create') }}"><i class="fa fa-circle-o"></i><span>Create User Type</span></a>
         </li>
     </ul>

@@ -41,7 +41,7 @@ function generate_multilevel_menus($parent_id = 0)
                             $html .= '<i class="' . $menu->icon . '"></i>';
                         }
                     } else {
-                        $html .= '<li id="' . $menu->selector . '-mm">';
+                        $html .= '<li id="' . $menu->selector . '-sm">';
                         $html .= '<a href="' . url($menu->route_name) . '">';
                         $html .= '<i class="fa fa-circle-o"></i>';
                     }

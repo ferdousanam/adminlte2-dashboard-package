@@ -22,10 +22,10 @@
         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
     </a>
     <ul class="treeview-menu">
-        <li id="sub-menus-sm">
+        <li id="sub-menus-sm" class="">
             <a href="{{ route('sub-menu.index') }}"><i class="fa fa-circle-o"></i><span>Show Sub Menus</span></a>
         </li>
-        <li id="sub-menus--create-sm">
+        <li id="sub-menus--create-sm" class="">
             <a href="{{ route('sub-menu.create') }}"><i class="fa fa-circle-o"></i><span>Create Sub Menu</span></a>
         </li>
     </ul>
