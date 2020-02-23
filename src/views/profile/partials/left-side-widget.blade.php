@@ -10,13 +10,13 @@
 
             <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
-                    <b>Email</b> <a class="pull-right">{{ Auth::user()->email }}</a>
+                    <b>Email</b> <p class="pull-right">{{ Auth::user()->email }}</p>
                 </li>
                 <li class="list-group-item">
-                    <b>Phone</b> <a class="pull-right">{{ (isset(Auth::user()->profile->phone)) ? Auth::user()->profile->phone : '' }}</a>
+                    <b>Phone</b> <p class="pull-right">{{ (isset(Auth::user()->profile->phone)) ? Auth::user()->profile->phone : '' }}</p>
                 </li>
                 <li class="list-group-item">
-                    <b>Location</b> <a class="pull-right">{{ (isset(Auth::user()->profile->address)) ? Auth::user()->profile->address : '' }}</a>
+                    <b>Location</b> <p class="pull-right">{{ (isset(Auth::user()->profile->address)) ? Auth::user()->profile->address : '' }}</p>
                 </li>
             </ul>
 

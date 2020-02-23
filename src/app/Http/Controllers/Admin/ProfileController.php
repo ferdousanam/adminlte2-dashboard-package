@@ -2,11 +2,11 @@
 
 namespace Anam\Dashboard\app\Http\Controllers\Admin;
 
-use App\Models\Admin\Profile;
-use App\Models\Admin\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Anam\Dashboard\Models\Priority;
+use Anam\Dashboard\Models\Profile;
+use Anam\Dashboard\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -35,8 +35,9 @@ class ProfileController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
+     * @throws \Illuminate\Validation\ValidationException
      */
     public function store(Request $request)
     {
@@ -138,9 +139,10 @@ class ProfileController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
+     * @throws \Illuminate\Validation\ValidationException
      */
     public function update(Request $request, $id)
     {
