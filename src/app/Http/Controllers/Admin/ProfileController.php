@@ -82,9 +82,11 @@ class ProfileController extends Controller
         if ($upload) {
             $user_id = Auth::user()->id;
             $user = User::find($user_id);
-            $oldAvatarPath = public_path() . '/uploads/profile-image/' . $user->profile_image;
-            if (file_exists($oldAvatarPath)) {
-                unlink($oldAvatarPath);
+            if ($user->profile_image) {
+                $oldAvatarPath = public_path() . '/uploads/profile-image/' . $user->profile_image;
+                if (file_exists($oldAvatarPath)) {
+                    unlink($oldAvatarPath);
+                }
             }
             $update = $user->update(array('profile_image' => $getImageName));
             if ($update) {
