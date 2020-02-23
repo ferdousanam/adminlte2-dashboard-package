@@ -2,7 +2,7 @@
 
 namespace Anam\Dashboard\app\DataTables;
 
-use App\Models\Admin\User;
+use Anam\Dashboard\Models\User;
 use Yajra\DataTables\Html\Button;
 use Yajra\DataTables\Html\Column;
 use Yajra\DataTables\Html\Editor\Editor;

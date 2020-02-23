@@ -6,7 +6,7 @@ use Anam\Dashboard\app\DataTables\UsersDataTable;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Anam\Dashboard\Models\Priority;
-use App\Models\Admin\User;
+use Anam\Dashboard\Models\User;
 
 class UsersController extends Controller
 {
