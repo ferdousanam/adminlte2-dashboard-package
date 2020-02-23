@@ -14,7 +14,7 @@
                     <!-- The user image in the navbar-->
                     <img src="{{ asset('vendor/dashboard/assets/dist/img/user2-160x160.jpg') }}" class="user-image" alt="User Image">
                     <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                    <span class="hidden-xs">Alexander Pierce</span>
+                    <span class="hidden-xs">{{ getLoginName() }}</span>
                 </a>
                 <ul class="dropdown-menu">
                     <!-- The user image in the menu -->
@@ -22,8 +22,8 @@
                         <img src="{{ asset('vendor/dashboard/assets/dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
 
                         <p>
-                            Alexander Pierce - Web Developer
-                            <small>Member since Nov. 2012</small>
+                            {{ getLoginName() }}
+                            <small>Member since Nov. 2020</small>
                         </p>
                     </li>
                     <!-- Menu Body -->
@@ -44,11 +44,14 @@
                     <!-- Menu Footer-->
                     <li class="user-footer">
                         <div class="pull-left">
-                            <a href="#" class="btn btn-default btn-flat">Profile</a>
+                            <a href="{{ route('profile.index') }}" class="btn btn-default btn-flat">Profile</a>
                         </div>
                         <div class="pull-right">
-                            <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                            <a href="{{ route('admin.logout') }}" class="btn btn-default btn-flat" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                         </div>
+                        <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
                     </li>
                 </ul>
             </li>
