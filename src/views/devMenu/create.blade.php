@@ -53,7 +53,7 @@
                 <div class="form-group row">
                     <label for="status" class="col-sm-2 control-label">Status *</label>
                     <div class="col-sm-10">
-                        <div class="input-active">
+                        <div class="radio-inline">
                             <label class="radio">
                                 <input type="radio" name="status" value="1"
                                     {{(old('status') !== 0) ? 'checked' : ''}}>

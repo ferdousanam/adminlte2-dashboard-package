@@ -1,7 +1,7 @@
 @extends('dashboard::layouts.app')
 
 @section('page_title', 'Add New User')
-@section('page_tagline', '')
+@section('page_tagline', 'Add New User')
 
 @section('content')
     @include('dashboard::msg.message')
