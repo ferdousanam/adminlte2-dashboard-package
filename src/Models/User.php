@@ -39,11 +39,18 @@ class User extends Authenticatable {
         'created_at', 'updated_at', 'last_login_at', 'last_failed_login_at'
     ];
 
+    protected $appends = ['avatar'];
+
     public function shouldHaveSelfVisibility()
     {
         return $this->makeVisible([
             'name', 'email', 'profile_image', 'password', 'user_level', 'status',
         ]);
+    }
+
+    public function getAvatarAttribute()
+    {
+        return $this->profile_image ? asset('uploads/profile-image/'.$this->profile_image) : asset('uploads/profile-image/default.png');
     }
 
     public function priority()
