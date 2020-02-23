@@ -26,10 +26,18 @@ function generate_visibility_menus($parent_id = 0)
             }
             if (($menu->route_name && $menu->route_name == '#') || $menu->parent_id == 0 || siblingsHasChild($menu->parent_id, $menu->id)) {
                 $html .= '<li class="col-sm-12">';
-                $html .= '<label class="kt-checkbox"><input type="checkbox" name="menu_id[]" value="' . $menu->id . '" id="menu-id-' . $menu->id . '" parent-id="' . $menu->parent_id . '" ' . $checked . '>' . $menu->menu_name . '<span></span></label>';
+                $html .= '<div class="form-group">';
+                $html .= '<div class="checkbox main-menu">';
+                $html .= '<label><input type="checkbox" class="flat-green" name="menu_id[]" value="' . $menu->id . '" id="menu-id-' . $menu->id . '" parent-id="' . $menu->parent_id . '" ' . $checked . '>' . $menu->menu_name . '<span></span></label>';
+                $html .= '</div>';
+                $html .= '</div>';
             } else {
                 $html .= '<li class="col-sm-4">';
-                $html .= '<label class="kt-checkbox kt-checkbox--success"><input type="checkbox" name="menu_id[]" value="' . $menu->id . '" id="menu-id-' . $menu->id . '" parent-id="' . $menu->parent_id . '" ' . $checked . '>' . $menu->menu_name . '<span></span></label>';
+                $html .= '<div class="form-group">';
+                $html .= '<div class="checkbox">';
+                $html .= '<label><input type="checkbox" class="flat-green" name="menu_id[]" value="' . $menu->id . '" id="menu-id-' . $menu->id . '" parent-id="' . $menu->parent_id . '" ' . $checked . '>' . $menu->menu_name . '<span></span></label>';
+                $html .= '</div>';
+                $html .= '</div>';
             }
             $html .= generate_visibility_menus($menu->id);
 

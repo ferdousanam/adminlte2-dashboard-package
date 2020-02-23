@@ -30,6 +30,6 @@
         </li>
     </ul>
 </li>
-<li id="menu-visibility-mm" class="treeview">
-  <a href="{{ route('menu-visibility.index') }}"><i class="fa fa-cog"></i><span>Menu Visibility</span></a>
+<li id="menu-visibility-mm">
+  <a href="{{ route('menu-visibility.index') }}"><i class="fa fa-eye"></i><span>Menu Visibility</span></a>
 </li>
