@@ -35,11 +35,20 @@ class User extends Authenticatable {
         'email_verified_at' => 'datetime',
     ];
 
+    protected $dates = [
+        'created_at', 'updated_at', 'last_login_at', 'last_failed_login_at'
+    ];
+
     public function shouldHaveSelfVisibility()
     {
         return $this->makeVisible([
             'name', 'email', 'profile_image', 'password', 'user_level', 'status',
         ]);
+    }
+
+    public function priority()
+    {
+        return $this->belongsTo(Priority::class, 'user_level', 'id');
     }
 
     public function profile(){

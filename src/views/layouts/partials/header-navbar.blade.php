@@ -23,10 +23,10 @@
 
                         <p>
                             {{ getLoginName() }}
-                            <small>Member since Nov. 2020</small>
+                            {{--<small>Member since Nov. 2020</small>--}}
                         </p>
                     </li>
-                    <!-- Menu Body -->
+                    {{--<!-- Menu Body -->
                     <li class="user-body">
                         <div class="row">
                             <div class="col-xs-4 text-center">
@@ -40,7 +40,7 @@
                             </div>
                         </div>
                         <!-- /.row -->
-                    </li>
+                    </li>--}}
                     <!-- Menu Footer-->
                     <li class="user-footer">
                         <div class="pull-left">
